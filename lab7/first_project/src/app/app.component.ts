@@ -10,5 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'first_project';
+  userTestStatus:{ name: string, phone: number, email: string  }[] = [
+    { "name": "Available", "phone": 234434, "email": "123@pl" },
+    { "name": "ma", "phone": 234434, "email": "123@pl" },
+    { "name": "metro", "phone": 234434, "email": "123@pl" },
+    { "name": "Available", "phone": 234434, "email": "123@pl" },
+    { "name": "Available", "phone": 234434, "email": "123@pl" },
+    { "name": "Available", "phone": 234434, "email": "123@pl" },
+  ];
 }
