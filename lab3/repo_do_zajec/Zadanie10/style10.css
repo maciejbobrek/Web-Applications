@@ -1,0 +1,117 @@
+:root{
+  margin-left:40%;
+  --position: rgba(246, 70, 255, 0.651);
+  --back: yellow;
+}
+body{
+  background-color: var(--back);
+}
+a{
+  text-decoration: none;
+}
+.list{
+  overflow: hidden;
+  list-style: none;
+  text-decoration: none;
+  width: 500px;
+  display: block;
+  border-radius: 10px;
+}
+.list-item{
+  overflow: hidden;
+}
+
+.list-item:target .sub-list{
+  max-height: 20em;
+}
+.list-item:target .sub-list-h{
+  display: none;
+}
+.list-item:target .second{
+  display: block;
+}
+.sub-list-h, .second{
+  display: block;
+  padding: 20px 15px;
+  padding-left:30px;
+  background-color: var(--position);
+  color: #fff;
+  position: relative;
+}
+.second{
+  background-color: rgba(141, 21, 21, 0.692);
+  display: none;
+  padding-left:30px;
+}
+.sub-list-h:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 15px;
+  bottom: -10px;
+  z-index: 1;
+  border-left: 10px solid transparent;
+  border-right:10px solid transparent;
+  border-top:18px  rgba(246, 70, 255, 0.651);
+
+}
+.second:before{
+  content: '';
+  position: absolute;
+  right: 15px;
+  bottom: -17px;
+  z-index: 1;
+  border-left: 15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:18px solid red;
+  transition: border-width 500ms ease all;
+}
+.sub-list{
+  background: rgb(18, 79, 158);
+  overflow: hidden;
+  max-height:0em;
+  transition: 500ms ease all;
+}
+.sub-list a{
+  display: block;
+  padding: 30px 15px;
+  color: white;
+  font-size: 16px;
+  padding-left: 40px;
+  position: relative;
+  
+}
+.sub-list a:before{
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s linear;
+
+}
+.sub-list a:hover{
+  background: -webkit-linear-gradient(top,  rgb(18, 79, 158) 50%, rgba(118, 147, 228, 0.445) 50% );
+}
+.sub-list a:hover::before{
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 10px;
+  left: 0;
+  top:15px;
+  opacity: 1;
+  border-top: 25px solid transparent;
+  border-left: 25px solid var(--back);
+  border-bottom: 25px solid transparent;
+}
+.sub-list a:hover::after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  top:13px;
+  height: 0;
+  right: 2px;
+  opacity: 1;
+  border-top: 27px solid transparent;
+  border-right: 25px solid var(--back);
+  border-bottom: 27px solid transparent;
+}

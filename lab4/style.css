@@ -1,0 +1,32 @@
+.jumbotron {
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    }
+section {
+    padding-top: 4rem;
+}
+
+p{
+    color: black;
+}
+#carouselExampleIndicators{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#carouselExampleIndicators p{
+    color:red;
+}
+#carouselExampleIndicators .carousel-control-prev{
+    color:black;
+    size:200%;
+}
+.carousel-inner img {
+    margin: auto;
+  }
+  html {
+    scroll-behavior: smooth;
+  }

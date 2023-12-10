@@ -1,0 +1,26 @@
+
+.task {
+    user-select: none;
+    padding: 20px 10px;
+}
+
+ol {
+    max-width: 900px;
+    list-style-type:none;
+}
+li:hover {
+    cursor: pointer;
+    background-color: red;
+    border-radius: 10px;
+}
+
+li:hover > p {
+    color: white;
+}
+
+.answer {
+    padding: 20px;
+    display: none;
+    background-color: rgba(216, 216, 216, 0.479);
+    border-radius: 10px;
+}

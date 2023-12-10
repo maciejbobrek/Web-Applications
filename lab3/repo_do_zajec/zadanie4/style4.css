@@ -1,0 +1,127 @@
+body{
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.left{
+    position: relative;
+    width: 500px;
+    margin: 20px;
+}
+.left p{
+    width: 400px;
+}
+h1, p, button{
+    color: white;
+}
+h1{
+    font-weight: 50;
+}
+button{
+    background-color: transparent;
+    padding: 12px 18px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 120px;
+}
+.right{
+    position: relative;
+    width: 300px;
+
+}
+form{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 13px;
+    color: gray;
+    box-shadow: 0 0 12px gray;
+}
+form label{
+    font-size: 150%;
+    margin-top: 15px;
+    height: 15%;
+}
+form input{
+    border: none;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.562);
+}
+
+.separator{
+    background-color: white;
+    border-right: 100vw solid white;
+    border-top:  200px solid blue;
+    margin-top: -150px;
+    height: 10000px;
+    margin-left: -10px;
+}
+
+
+.button{
+    background-color: rgba(23, 98, 218, 0.932);
+    width: 85px;
+    height: 30px;
+    color: white;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+@keyframes downGetIn {
+    from {transform: translateY(75%); }
+    to {transform: translateX(0); }
+}
+@keyframes upGetIn {
+    from {transform: translateY(-75%);}
+    to {transform: translateX(0); }
+}
+@keyframes leftGetIn {
+    from {transform: translateX(-75%);}
+    to {transform: translateX(0); }
+}
+@keyframes rightGetIn {
+    from {transform: translateX(75%);}
+    to {transform: translateX(0); }
+}
+
+@media screen and (min-width: 600px){
+    .left{
+        animation-name: leftGetIn;
+        animation-duration: 2s;
+    }
+    .right{
+        animation-name: rightGetIn;
+        animation-duration: 2s;
+    }
+}
+@media screen and (max-width: 600px){
+    .left p{
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        animation-name: upGetIn ;
+        animation-duration: 2s;
+    }
+    .right{
+        animation-name: downGetIn ;
+        animation-duration: 2s;
+    }
+}

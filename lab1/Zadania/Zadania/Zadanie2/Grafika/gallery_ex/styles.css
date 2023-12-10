@@ -1,0 +1,37 @@
+
+h1{
+    color: rgb(52, 52, 119);
+    border-bottom: 1px dotted black;
+    border-left: 1px dotted black;
+    border-top: 1px dotted black;
+    font-weight: 100;
+}
+.intro{
+    padding: 5px;
+    margin-top: -20px;
+    margin-left: 0px;
+    width: fit-content;
+    border-left: 1px dotted black;
+    font-size: 100%;
+    text-align: left;
+}
+
+img{
+    border-collapse: collapse;
+    padding: 4px;
+    box-shadow: 3px 3px 5px #534b4b9d;
+    border: 1px solid black;
+}
+.figure:nth-child(2n+1){
+    float: left;
+}
+.figure:nth-child(2n){
+    margin-left: 250px;
+}
+
+p{
+    margin-left: 30px;
+    width: 150px;
+    text-align: center;
+    font-size: 80%;
+}

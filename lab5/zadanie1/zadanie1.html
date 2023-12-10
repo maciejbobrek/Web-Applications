@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - JavaScript</title>
+</head>
+<body>
+
+<section id="imieSection">
+    <h2>Twoje imie:<span id="imie"></span></h2>
+</section>
+
+<button id="przycisk">Wprowadz dane</button>
+
+<script>
+    function event(){
+        var imie=prompt("Wprowadz swoje imie:");
+        if(imie !== null && imie!== ""){
+            var sekcja = document.getElementById("imieSection");
+            var Spanimie = document.getElementById("imie");
+            Spanimie.textContent=imie;
+        }
+        else{
+            alert("Wprowadź poprawne imie!");
+        }
+    }
+
+    document.getElementById("przycisk").addEventListener("click",event);
+</script>
+
+
+</body>
+</html>

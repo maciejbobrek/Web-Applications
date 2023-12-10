@@ -1,0 +1,17 @@
+
+#section2{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    #carouselExampleCaptions{
+        display: none;
+    }
+    #section2{
+        margin-top:50px;
+    }
+  }

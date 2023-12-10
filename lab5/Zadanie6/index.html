@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - JavaScript</title>
+    <script type="module" src="script.js" defer></script>
+    <style>
+        .box {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script type="module" src="script.js"></script>
+
+    <label for="accept">
+        <input type="checkbox" id="accept" name="accept" value="yes" onclick="myFunction()"> Hide Personal
+    </label>
+    <script>
+        function myFunction() {
+            var checkBox = document.getElementById("accept");
+            if (checkBox.checked == true) {
+                document.querySelectorAll('.email,.phone').forEach((item) => {
+                    item.style.display="none";
+                })
+            } else {
+                document.querySelectorAll('.email,.phone').forEach((item) => {
+                    item.style.display="block";
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

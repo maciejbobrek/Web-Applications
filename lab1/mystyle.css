@@ -1,0 +1,103 @@
+body {
+    background-color: white;
+  }
+  
+#first {
+    font-family: verdana;
+    font-size: 20px;
+    background-color: rebeccapurple;
+    margin : auto;
+    padding: 50px;
+    margin: 20px;
+}
+#sec {
+    overflow: auto;
+    width: 500px;
+    height: 100px;
+    color: blue;
+    font-family: verdana;
+    font-size: 20px;
+    background-color: red;
+    margin: 20px; 
+}
+#third {
+    overflow: scroll;
+    width: 400px;
+    height: 100px;
+    color: green;
+    font-style: verdana;                        
+    font-size: 20px;
+    background-color: blanchedalmond;
+    margin: 20px;
+}
+#four {
+    font-family: verdana;
+    font-size: 20px;
+    background-color: olive;
+    padding: 50px;
+    margin: 20px;
+}
+.borderless{
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    border-color: white;
+    width: 70%;
+    height: 60%;
+}
+.borderless th{
+    border-bottom: 4px solid white;
+    border-color: white;
+    background-color: rgb(107, 107, 231);
+    padding: 15px;
+}
+.borderless td{
+    border-color: white;
+    padding: 15px;
+}
+.borderless #one{
+    background-color: rgba(195, 232, 246, 0.372);
+}
+.borderless #two{
+    background-color: rgba(170, 200, 243, 0.471);
+}
+
+.weird{
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 70%;
+    height: 90%;
+}
+.weird th{
+    border: 1px;
+    border: 1px solid black;
+    background-color: rgb(61, 58, 58);
+    padding: 15px;
+}
+.weird td{
+    border: 1px;
+    border: 1px solid black;
+    background-color: grey;
+    padding: 15px;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+    margin-top: 100px;
+    padding: 10px;
+    position: relative;
+}
+p {
+    text-align: center;
+}
+
+.europa{
+    display: list-item;
+    background-image: url("download.jpeg");
+}

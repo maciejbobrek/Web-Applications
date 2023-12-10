@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - JavaScript Zadanie 4</title>
+</head>
+<body>
+
+<!-- Przycisk do testowania -->
+<button id="przycisk">Testuj</button>
+
+<!-- Licznik przyciśnięć -->
+<p>Liczba przyciśnięć: <span id="licznik">0</span></p>
+
+<script>
+    // Inicjalizacja licznika
+    var licznikPrzycisniec = 0;
+
+    // Funkcja obsługująca przycisk
+    function obslugaPrzycisku() {
+        // Inkrementacja licznika
+        licznikPrzycisniec++;
+        
+        // Aktualizacja licznika na stronie
+        document.getElementById("licznik").textContent = licznikPrzycisniec;
+    }
+
+    // Dodanie obsługi przycisku
+    function dodajObslugePrzycisku() {
+        document.getElementById("przycisk").addEventListener("click", obslugaPrzycisku);
+    }
+
+    // Usunięcie obsługi przycisku
+    function usunObslugePrzycisku() {
+        licznikPrzycisniec=0;
+        document.getElementById("przycisk").removeEventListener("click", obslugaPrzycisku);
+    }
+
+    // Dodanie obsługi przycisku na początku
+    dodajObslugePrzycisku();
+
+    // Przykładowy kod, który dodaje i usuwa obsługę przycisku co 5 sekund
+    setInterval(function() {
+        if (licznikPrzycisniec % 5 === 0) {
+            usunObslugePrzycisku();
+            console.log("Obsługa przycisku została usunięta.");
+        } else {
+            dodajObslugePrzycisku();
+            console.log("Obsługa przycisku została dodana.");
+        }
+    }, 5000);
+</script>
+
+</body>
+</html>
