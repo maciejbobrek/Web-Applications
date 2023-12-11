@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavoriteCountriesComponent } from './favorite-countries/favorite-countries.component';
+import { ColorChangeComponent } from './color-change/color-change.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FavoriteCountriesComponent
+    FavoriteCountriesComponent,
+    ColorChangeComponent
   ],
   imports: [
     BrowserModule,
