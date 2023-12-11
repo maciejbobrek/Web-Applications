@@ -1,44 +1,56 @@
-<html lang="en">
+<html>
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
+
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 </head>
 
-<body>
 
+<body>
+  <script>
+    function showinfo() {
+      console.log('2');
+      content = document.getElementsByClassName("collapseExample");
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+
+    }
+
+
+    document.getElementById("button").addEventListener("click", showinfo)
+  </script>
   <div class="container">
     <div class="row">
       <div class="col-2" id="box" *ngFor="let item of userTestStatus">
-        <p id="name">{{item.name}}</p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bstarget="#collapseExample"
-          aria-expanded="false" aria-controls="collapseExample">
+        <div id="name">{{item.name}}</div>
+        <button type="button" id="button">
           show data
         </button>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            <p id="phone">{{item.phone}}</p>
-            <p id="email">{{item.email}}</p>
+        <div>
+          <div>
+            <p id="phone">Numer: {{item.phone}}</p>
+            <p id="email">Email: {{item.email}}</p>
           </div>
         </div>
       </div>
 
     </div>
-    <button data-toggle="collapse" data-target="#demo">Collapsible</button>
-
-    <div id="demo" class="collapse">
-      Lorem ipsum dolor text....
-    </div>
   </div>
+
 </body>
+
 
 </html>
