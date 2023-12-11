@@ -1,0 +1,19 @@
+<!-- favorite-countries.component.html -->
+<div>
+    <h2>Favorite Countries</h2>
+    <input [(ngModel)]="newCountryName" placeholder="Enter country name" />
+    <button (click)="addCountry()">Add</button>
+    <p *ngIf="countries.length === 0">No favorite countries yet.</p>
+    <ul>
+      <li *ngFor="let country of countries; let i = index"
+          [ngClass]="{
+            'blue-background': i % 2 === 0 && (country.name.includes('a') || country.name.includes('r')),
+            'yellow-background': i % 2 === 0 && (!country.name.includes('a') && !country.name.includes('r')),
+            'orange-background': i % 2 !== 0 && country.name.length > 6,
+            'gray-background': i % 2 !== 0 && country.name.length <= 6
+          }">
+        <a [href]="country.link" target="_blank">{{ i+1+". " + country.name }}</a>
+        <button (click)="removeCountry(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
