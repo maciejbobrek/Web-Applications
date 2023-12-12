@@ -1,5 +1,5 @@
 {
-  "name": "zadanie1",
+  "name": "zadanie2",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:zadanie1": "node dist/zadanie1/server/server.mjs"
+    "serve:ssr:zadanie2": "node dist/zadanie2/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",
-    "@angular/forms": "^17.0.6",
+    "@angular/forms": "^17.0.0",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/platform-server": "^17.0.0",
